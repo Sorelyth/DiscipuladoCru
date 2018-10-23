@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">CruProject</string>
+    <string name="olvido_contra">¿Olvido su contraseña?</string>
+    <string name="correo">Correo</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="bienvenido">¡Bienvenido!</string>
+    <string name="bendicion">¡Dios te bendiga!</string>
+    <string name="usuario_incorrecto">Usuario no encontrado en la base de datos</string>
+    <string name="registro">REGISTRO</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="edad">Edad</string>
+    <string name="cedula">Cédula</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="pais">País</string>
+    <string name="cargo">Rol o Cargo</string>
+    <string name="componente">Componente</string>
+    <string name="fase_discipulo">Fase Discipulo</string>
+    <string name="lider_nal">¿Hace parte del liderazgo nacional?</string>
+    <string name="lider_ciudad">¿Hace parte del lidergazgo de ciudad?</string>
+    <string name="estado">Estado en la organización</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="dir">Director Cru País</string>
+    <string name="ctc">Coordinador Tiempo Completo</string>
+    <string name="cmt">Coordinador Medio Tiempo</string>
+    <string name="voluntario">Voluntario</string>
+    <string name="estudiante">Estudiante asistente</string>
+    <string name="mde">Movimiento dirigido por estudiantes</string>
+    <string name="li">Leader Impact</string>
+    <string name="mgi">Movimiento Global de Iglesias</string>
+    <string name="ac">Atletas en acción</string>
+    <string name="sv">Student Venture</string>
+    <string name="ed">Estrategias digitales</string>
+    <string name="fl">Family Life</string>
+    <string name="nuevo_creyente">Nuevo creyente</string>
+    <string name="discipulo">Discipulo</string>
+    <string name="error_vacio">Diligencie campo vacío</string>
+    <string name="error_negativo">Valor no valido</string>
+    <string name="guardado">Usuario registrado exitosamente</string>
+    <string name="existente">Usuario ya registrado en la base de datos</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="activo">Activo</string>
+    <string name="inactivo">Inactivo</string>
+    <string name="info">Información Discipulo</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="pregunta_eliminar">¿Está seguro que desea eliminar al discipulo?</string>
+    <string name="eliminar_si">Si, eliminar discipulo</string>
+    <string name="eliminar_no">No, cancelar eliminación</string>
+    <string name="pregunta_editar">¿Está seguro que desea editar la información del discipulo?</string>
+    <string name="editar_si">Si, editar información</string>
+    <string name="editar_no">No, cancelar edición</string>
+    <string name="mis_discipulos">MIS DISCIPULOS</string>
+
+
+    <string-array name="opc_cargo">
+        <item>@string/dir</item>
+        <item>@string/ctc</item>
+        <item>@string/cmt</item>
+        <item>@string/voluntario</item>
+        <item>@string/estudiante</item>
+
+    </string-array>
+
+    <string-array name="opc_componente">
+        <item>@string/mde</item>
+        <item>@string/sv</item>
+        <item>@string/ac</item>
+        <item>@string/li</item>
+        <item>@string/mgi</item>
+        <item>@string/ed</item>
+        <item>@string/fl</item>
+
+    </string-array>
+
+    <string-array name="opc_fase">
+        <item>@string/nuevo_creyente</item>
+        <item>@string/discipulo</item>
+    </string-array>
+
+    <string-array name="opc_Nal">
+        <item>@string/si</item>
+        <item>@string/no</item>
+    </string-array>
+
+    <string-array name="opc_Cdad">
+        <item>@string/si</item>
+        <item>@string/no</item>
+    </string-array>
+
+    <string-array name="opc_Estado">
+        <item>@string/activo</item>
+        <item>@string/inactivo</item>
+    </string-array>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Cru Project</string>
+    <string name="nav_header_subtitle">discipulado.app@cru.org</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="ver_discipulos">Ver discípulos</string>
+    <string name="registrar_nuevo">Registrar nuevo</string>
+    <string name="arbol_discipulado">Ver árbol de discipulado</string>
+    <string name="reportar_proceso">Reportar proceso de discipulos</string>
+    <string name="estadisticas">Estadisticas</string>
+</resources>

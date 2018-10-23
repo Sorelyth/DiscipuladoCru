@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navVerDiscipulos"
+            android:title="@string/ver_discipulos"/>
+        <item
+            android:id="@+id/navRegistrarNuevo"
+            android:title="@string/registrar_nuevo"/>
+        <item
+            android:id="@+id/navReportar_proceso"
+            android:title="@string/reportar_proceso"/>
+        <item
+            android:id="@+id/navArbolDiscipulado"
+            android:title="@string/arbol_discipulado"/>
+        <item
+            android:id="@+id/navEstadisticas"
+            android:title="@string/estadisticas"/>
+    </group>
+
+</menu>
