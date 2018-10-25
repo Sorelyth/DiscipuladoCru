@@ -2,9 +2,9 @@ package co.cru.cruproject;
 
 public class Usuario {
     private String nombre, correo, pais, ciudad, cargo, comp, fase, nal, cdad, estado;
-    private double edad, ced;
+    private int edad, ced;
 
-    public Usuario(String nombre, String correo, double edad, double ced, String pais, String ciudad, String cargo, String comp, String fase,
+    public Usuario(String nombre, String correo, int edad, int ced, String pais, String ciudad, String cargo, String comp, String fase,
                    String nal, String cdad, String estado) {
         this.nombre = nombre;
         this.correo = correo;
@@ -84,15 +84,15 @@ public class Usuario {
         return edad;
     }
 
-    public void setEdad(double edad) {
+    public void setEdad(int edad) {
         this.edad = edad;
     }
 
-    public double getCed() {
+    public int getCed() {
         return ced;
     }
 
-    public void setCed(double ced) {
+    public void setCed(int ced) {
         this.ced = ced;
     }
 

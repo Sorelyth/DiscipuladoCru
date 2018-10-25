@@ -30,7 +30,7 @@ public class UsuariosLst extends AppCompatActivity implements adpUsuario.OnUsuar
         lstUsers.setAdapter(adp);
     }
 
-    public void registrarUsuario(View v){//Agregar a NavigationBar o a Boton
+    public void registrarUsuario(View v){//Agregar a NavigationDrawer o a Button
         startActivity(new Intent(UsuariosLst.this, Registro.class));
     }
 

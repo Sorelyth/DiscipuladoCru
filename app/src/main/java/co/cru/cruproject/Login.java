@@ -9,27 +9,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 public class Login extends AppCompatActivity {
     private EditText Correo, Contraseña;
     private TextView Recuperar;
     private Button Ingresar;
-    private String nombredb = "AppDiscipulado";
-    private DatabaseReference db = FirebaseDatabase.getInstance().getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Correo = (EditText) findViewById(R.id.txtCorreo);
-        Contraseña = (EditText) findViewById(R.id.txtContraseña);
-        Recuperar = (TextView) findViewById(R.id.txtRecuperar);
-        Ingresar = (Button) findViewById(R.id.btnLogin);
+        Correo = findViewById(R.id.txtCorreo);
+        Contraseña = findViewById(R.id.txtContraseña);
+        Recuperar = findViewById(R.id.txtRecuperar);
+        Ingresar = findViewById(R.id.btnLogin);
 
     }
 
@@ -48,32 +40,6 @@ public class Login extends AppCompatActivity {
     }
 
     public void Ingreso(View v){
-        /*db.child(nombredb).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String correo,contra;
-                correo= Correo.getText().toString();
-                contra= Contraseña.getText().toString();
-                if (validarDatos()){
-                if(dataSnapshot.exists()){
-                    for(DataSnapshot snapshot:dataSnapshot.getChildren()){
-                        Usuario u = snapshot.getValue(Usuario.class);
-                        if(u.getCorreo().equals(correo) && String.valueOf(u.getCed()).equals(contra)){
-                            BaseDatos.setId(u.getCorreo());
-                            startActivity(new Intent(Login.this, Menu.class));
-                            finish();
-                            return;
-                        }
-                    }
-                }
-                Toast.makeText(getApplicationContext(),R.string.usuario_incorrecto,Toast.LENGTH_LONG).show();
-                }
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        });*/
-
 
         String correo,contra;
         correo = Correo.getText().toString();

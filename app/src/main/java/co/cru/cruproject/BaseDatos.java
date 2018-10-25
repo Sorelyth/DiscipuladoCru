@@ -1,13 +1,9 @@
 package co.cru.cruproject;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.ArrayList;
 
 public class BaseDatos {
     private static String nombredb = "AppDiscipulado";
-    private static DatabaseReference db = FirebaseDatabase.getInstance().getReference();
     private static ArrayList<Usuario> users = new ArrayList<>();
     private static String id;
 
@@ -20,9 +16,9 @@ public class BaseDatos {
         return users;
     }
 
-    public static String getId(){
+    /*public static String getId(){
         return db.push().getKey();
-    }
+    }*/
 
     public static void setId(String correo) {
         BaseDatos.id = correo;

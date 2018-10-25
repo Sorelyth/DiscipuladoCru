@@ -2,7 +2,6 @@ package co.cru.cruproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -21,39 +20,39 @@ public class Registro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-        Nombre = (EditText) findViewById(R.id.txtNombre);
-        Correo = (EditText) findViewById(R.id.txtCorreo);
-        Edad = (EditText) findViewById(R.id.txtEdad);
-        Cedula = (EditText) findViewById(R.id.txtCedula);
-        Pais = (EditText) findViewById(R.id.txtPais);
-        Ciudad = (EditText) findViewById(R.id.txtCiudad);
+        Nombre = findViewById(R.id.txtNombre);
+        Correo = findViewById(R.id.txtCorreo);
+        Edad = findViewById(R.id.txtEdad);
+        Cedula = findViewById(R.id.txtCedula);
+        Pais = findViewById(R.id.txtPais);
+        Ciudad = findViewById(R.id.txtCiudad);
 
-        Cargo = (Spinner) findViewById(R.id.spnCargo);
+        Cargo = findViewById(R.id.spnCargo);
         opcCargo = getResources().getStringArray(R.array.opc_cargo);
         ArrayAdapter<String> adp_cargo = new ArrayAdapter(this,android.R.layout.simple_spinner_item,opcCargo);
         Cargo.setAdapter(adp_cargo);
 
-        Componente = (Spinner) findViewById(R.id.spnComponente);
+        Componente = findViewById(R.id.spnComponente);
         opcComponente = getResources().getStringArray(R.array.opc_componente);
         ArrayAdapter<String> adp_componente = new ArrayAdapter(this,android.R.layout.simple_spinner_item,opcComponente);
         Componente.setAdapter(adp_componente);
 
-        Fase = (Spinner) findViewById(R.id.spnFaseDisci);
+        Fase = findViewById(R.id.spnFaseDisci);
         opcFase = getResources().getStringArray(R.array.opc_fase);
         ArrayAdapter<String> adp_fase = new ArrayAdapter(this,android.R.layout.simple_spinner_item,opcFase);
         Fase.setAdapter(adp_fase);
 
-        LiNal = (Spinner) findViewById(R.id.spnLiNaL);
+        LiNal = findViewById(R.id.spnLiNaL);
         opcNal = getResources().getStringArray(R.array.opc_Nal);
         ArrayAdapter<String> adp_nal = new ArrayAdapter(this,android.R.layout.simple_spinner_item,opcNal);
         LiNal.setAdapter(adp_nal);
 
-        LiCdad = (Spinner) findViewById(R.id.spnLiCdad);
+        LiCdad = findViewById(R.id.spnLiCdad);
         opcCdad = getResources().getStringArray(R.array.opc_Cdad);
         ArrayAdapter<String> adp_cdad = new ArrayAdapter(this,android.R.layout.simple_spinner_item,opcCdad);
         LiCdad.setAdapter(adp_cdad);
 
-        Estado = (Spinner) findViewById(R.id.spnEstado);
+        Estado = findViewById(R.id.spnEstado);
         opcEstado = getResources().getStringArray(R.array.opc_Estado);
         ArrayAdapter<String> adp_estado = new ArrayAdapter(this,android.R.layout.simple_spinner_item,opcEstado);
         Estado.setAdapter(adp_estado);
@@ -120,14 +119,14 @@ public class Registro extends AppCompatActivity {
 
     public void GuardarRegistro(View v){
         String nombre, correo, pais, ciudad, cargo, comp, fase, nal, cdad, est;
-        double edad, ced;
+        int edad, ced;
         if (validardatos()){
             nombre = Nombre.getText().toString();
             correo = Correo.getText().toString();
             pais = Pais.getText().toString();
             ciudad = Ciudad.getText().toString();
-            edad = Double.parseDouble(Edad.getText().toString());
-            ced = Double.parseDouble(Cedula.getText().toString());
+            edad = Integer.parseInt(Edad.getText().toString());
+            ced = Integer.parseInt(Cedula.getText().toString());
             cargo = Cargo.getSelectedItem().toString();
             comp = Componente.getSelectedItem().toString();
             fase = Fase.getSelectedItem().toString();
@@ -144,6 +143,6 @@ public class Registro extends AppCompatActivity {
 
     public void onBackPressed(){
         finish();
-        startActivity(new Intent(Registro.this,Menu.class));
+        startActivity(new Intent(Registro.this,NavigationDrawer.class));
     }
 }
