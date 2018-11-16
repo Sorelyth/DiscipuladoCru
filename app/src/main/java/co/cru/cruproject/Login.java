@@ -9,10 +9,22 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Login extends AppCompatActivity {
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.JsonRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONObject;
+
+public class Login extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener {
     private EditText Correo, Contraseña;
     private TextView Recuperar;
     private Button Ingresar;
+    private RequestQueue rq;
+    private JsonRequest jrq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +34,9 @@ public class Login extends AppCompatActivity {
         Contraseña = findViewById(R.id.txtContraseña);
         Recuperar = findViewById(R.id.txtRecuperar);
         Ingresar = findViewById(R.id.btnLogin);
+
+        rq = Volley.newRequestQueue(getApplicationContext());
+
 
     }
 
@@ -41,8 +56,12 @@ public class Login extends AppCompatActivity {
 
     public void Ingreso(View v){
 
-        String correo,contra;
-        correo = Correo.getText().toString();
+        String correo,contra, url;
+        url = "http://5.135.246.237/DBCru/login.php?correo="+Correo.getText().toString()+"&contraseña="+Contraseña.getText().toString();
+        jrq = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
+        rq.add(jrq);
+
+        /*correo = Correo.getText().toString();
         contra = Contraseña.getText().toString();
         if (validarDatos()) {
             if ((correo.equals("carlos.c@cru.org")) && (contra.equals("1234567890"))) {
@@ -50,11 +69,20 @@ public class Login extends AppCompatActivity {
             } else {
                 Toast.makeText(getApplicationContext(), R.string.usuario_incorrecto, Toast.LENGTH_LONG).show();
             }
-        }
+        }*/
     }
 
     public void recuperar_contraseña(View v){
         startActivity(new Intent(Login.this, Contrasena.class));
     }
 
+    @Override
+    public void onErrorResponse(VolleyError error) {
+        Toast.makeText(getApplicationContext(), R.string.usuario_incorrecto, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onResponse(JSONObject response) {
+        Toast.makeText(getApplicationContext(), R.string.usuario_correcto, Toast.LENGTH_LONG).show();
+    }
 }

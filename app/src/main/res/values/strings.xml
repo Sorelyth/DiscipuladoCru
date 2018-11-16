@@ -7,6 +7,7 @@
     <string name="bienvenido">¡Bienvenido!</string>
     <string name="bendicion">¡Dios te bendiga!</string>
     <string name="usuario_incorrecto">Usuario no encontrado en la base de datos</string>
+    <string name="usuario_correcto">Usuario encontrado en la base de datos</string>
     <string name="registro">REGISTRO</string>
     <string name="nombre_completo">Nombre Completo</string>
     <string name="edad">Edad</string>
@@ -100,6 +101,7 @@
     <string name="nav_header_subtitle">discipulado.app@cru.org</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
     <string name="ver_discipulos">Ver discípulos</string>
     <string name="registrar_nuevo">Registrar nuevo</string>
     <string name="arbol_discipulado">Ver árbol de discipulado</string>

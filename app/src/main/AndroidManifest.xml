@@ -19,14 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menu" />
         <activity android:name=".Registro" />
         <activity android:name=".Contrasena" />
         <activity android:name=".UsuariosLst" />
         <activity android:name=".DetalleUsuario" />
         <activity
             android:name=".NavigationDrawer"
-            android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme"></activity>
     </application>
 
