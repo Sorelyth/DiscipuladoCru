@@ -110,4 +110,9 @@ public class DetalleUsuario extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
+    public void onBackPressed(){
+        finish();
+        startActivity(new Intent(DetalleUsuario.this,NavigationDrawer.class));
+    }
 }

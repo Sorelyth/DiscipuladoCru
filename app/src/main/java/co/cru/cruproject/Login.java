@@ -79,10 +79,12 @@ public class Login extends AppCompatActivity implements Response.Listener<JSONOb
     @Override
     public void onErrorResponse(VolleyError error) {
         Toast.makeText(getApplicationContext(), R.string.usuario_incorrecto, Toast.LENGTH_LONG).show();
+        startActivity(new Intent(Login.this, Login.class));
     }
 
     @Override
     public void onResponse(JSONObject response) {
         Toast.makeText(getApplicationContext(), R.string.usuario_correcto, Toast.LENGTH_LONG).show();
+        startActivity(new Intent(Login.this, NavigationDrawer.class));
     }
 }

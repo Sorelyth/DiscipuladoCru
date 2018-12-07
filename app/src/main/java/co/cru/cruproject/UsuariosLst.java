@@ -46,4 +46,9 @@ public class UsuariosLst extends AppCompatActivity implements adpUsuario.OnUsuar
         i.putExtra("Datos ", b);
         startActivity(i);
     }
+
+    public void onBackPressed(){
+        finish();
+        startActivity(new Intent(UsuariosLst.this,NavigationDrawer.class));
+    }
 }
